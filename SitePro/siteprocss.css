@@ -1,0 +1,14 @@
+h3.name{
+    color:red;
+    font-size:20px;
+ }
+
+ul.menu{
+    color: blue;
+    font-size: medium;
+}
+
+img.photo{
+    float: right;
+    width: 150;
+}
