@@ -12,3 +12,8 @@ img.photo{
     float: right;
     width: 150;
 }
+
+h1 {background-color:#6495ed;}
+h2 {background-color: cadetblue;}
+h3 {color: darkred;}
+p {background-color:#e0ffff;}
