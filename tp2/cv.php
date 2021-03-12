@@ -2,7 +2,7 @@
         <?php
         require_once('template_header.php');
         ?>  
-        <img class="photo" src="photo1.jpg"></img>
+        <img class="photo" src="photo1.jpg" width="150"></img>
         <h1>C'est mon cv</h1>
         <hr />
         <h3 class="name">Xuechu WANG</h3>
@@ -20,11 +20,10 @@
             </p>
         <hr />
         <h2>Menu</h2>
-        <ul class="menu">
-            <li><a href="cv.php">cv</a></li>
-            <li><a href="motivation.php">motivation</a></li>
-            <li><a href="loisir.php">loisir</a></li>
-        </ul>
+        <?php
+        require_once('template_menu.php');
+        renderMenuToHTML('index');
+        ?>  
         <?php
         require_once('template_footer.php');
         ?>
