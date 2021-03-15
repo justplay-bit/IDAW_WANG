@@ -2,6 +2,7 @@
 // on simule une base de données
 $users = array(
 // login => password
+'wxc' => '123456',
 'riri' => 'fifi',
 'yoda' => 'maitrejedi' );
 $login = "anonymous";
@@ -20,7 +21,22 @@ if( array_key_exists($tryLogin,$users) && $users[$tryLogin]==$tryPwd ) {
     $errorText = "Merci d'utiliser le formulaire de login";
     if(!$successfullyLogged) {
     echo $errorText;
-    } else {
-    echo "<h1>Bienvenu ".$login."</h1>";
+    } 
+
+    else {
+    echo "<h1>Bienvenu!! ".$login."</h1>";
+    echo "</br>";
+    echo "<a href=page1.php>chousir page1</a>";
+    echo "</br>";
+    echo "<a href=page2.php>chousir page2</a>";
+
     }
-    ?>
+
+    session_start();
+    $_SESSION['login'] =$_POST['login'];
+    $_SESSION['password']   = $_POST['password'];
+    echo "</br>";
+    echo '<a href="disconnected.php">disconnected</a>';
+
+?>
+
