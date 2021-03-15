@@ -4,4 +4,5 @@
 <option value="style2">style2</option>
 </select>
 <input type="submit" value="Appliquer" />
+
 </form>
