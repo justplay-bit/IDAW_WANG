@@ -30,13 +30,20 @@ $pageToInclude =  $currentPageId . ".php";
 if(is_readable($pageToInclude)){
     require_once($pageToInclude);
 }
-
 else{ 
     require_once("error.php");
 }
-
 ?>
 </section>
+
+<!-- <form id="style_form" action="index.php" method="GET">
+<select name="css">
+<option value="style1">style1</option>
+<option value="style2">style2</option>
+</select>
+<input type="submit" value="Appliquer" />
+</form> -->
+
 <?php
 require_once("template_footer.php");
 ?>
