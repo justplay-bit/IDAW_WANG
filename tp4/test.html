@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <title>tabletest</title>
+    <style>
+    body{ margin-top: 5em; }
+    .table {
+        margin-top: 100px;
+        margin-bottom: 100px; }
+</style>
+</head>
+
+<body>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col">Date de naissance</th>
+        <th scope="col">Aime le cours Web</th>
+        <th scope="col">Remarques</th>
+        <th scope="col">CRUD</th>
+    </tr>
+    </thead>
+    <tbody id="studentsTableBody">
+
+    </tbody>
+</table>
+
+<form id="addStudentForm" action="" onsubmit="onFormSubmit();">
+    <div class="form-group row">
+        <label id="obl" for="inputNom" class="col-sm-2 col-form-label">Nom*</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="inputNom" >
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="inputPrenom" class="col-sm-2 col-form-label">Prenom</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="inputPrenom" >
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="inputBirthday" class="col-sm-2 col-form-label">Date de naissance</label>
+        <div class="col-sm-3">
+            <input type="date" class="form-control" id="inputBirthday" >
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="inputLike" class="col-sm-2 col-form-label">Adore le cours</label>
+        <div class="col-sm-3">
+            <input type="checkbox" class="form-control" id="inputLike" >
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="inputRemark" class="col-sm-2 col-form-label">Remarques</label>
+        <div class="col-sm-3">
+            <input type="text" class="form-control" id="inputRemark" >
+        </div>
+    </div>
+    ...
+    <div class="form-group row">
+        <span class="col-sm-2"></span>
+        <div class="col-sm-2">
+            <button type="submit" class="btn btn-primary form-control">Submit</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    function onFormSubmit() {
+// prevent the form to be sent to the server
+        event.preventDefault();
+        let nom = $("#inputNom").val();
+        let prenom=$("#inputPrenom").val();
+        let birthday=$("#inputBirthday").val();
+        let like=$("#inputLike").prop("checked")?"oui":"non";
+        let remark=$("#inputRemark").val();
+        if(nom!="") {
+            $("#studentsTableBody").append(`
+                <tr>
+                    <td>${nom}</td>
+                    <td>${prenom}</td>
+                    <td>${birthday}</td>
+                    <td>${like}</td>
+                    <td>${remark}</td>
+                    <td><button id="delete" type="button" onclick="onDelete()">Delete</button></td>
+                    <td><button id="edit" type="button" onclick="onEdite()">Edit</button></td>
+                </tr>`);
+        }else{
+            document.getElementById('obl').innerText = '  Nom OBLIGATOIRE';
+        }
+    }
+</script>
+<script>
+    function onDelete() {
+
+    }
+</script>
+</body>
+</html>
