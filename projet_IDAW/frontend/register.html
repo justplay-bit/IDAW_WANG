@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <link href="/static/css/swiper/swiper-bundle.min.css" rel="stylesheet"/>
+    <title>日常能量</title>
+
+    <script src="/static/js/jquery.min.js" type="text/javascript"></script>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        a,
+        input {
+            list-style-type: none;
+            text-decoration: none;
+            outline: none;
+        }
+
+        .flex-row {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .flex-1 {
+            flex: 1;
+        }
+
+        .main {
+            width: 100vw;
+            overflow-x: hidden;
+            border: 1px solid transparent;
+        }
+
+        .head-bar {
+            background-color: #333333;
+            height: 1.1rem;
+            font-size: 0.18rem;
+            border: 1px solid transparent;
+            background-image: url("/static/imgs/head2.png");
+            position: absolute;
+            width: 100%;
+            height: 6.21rem;
+            z-index: -2;
+        }
+
+        .head-bar img {
+            width: 4.27rem;
+            height: 0.45rem;
+            margin: 0.24rem 0.2rem 0rem 3.6rem;
+            overflow-x: hidden;
+        }
+
+        .head-bar span {
+            color: #ffffff;
+            letter-spacing: 5px;
+            margin: 0.41rem 0rem 0rem 0rem;
+            height: 0.18rem;
+            position: relative;
+        }
+
+        .main-content {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            margin: 1.79rem 0rem 0rem 0rem;
+            padding: 0rem 0rem 0.59rem 0rem;
+        }
+
+        .login-c {
+            background-color: #ffffff;
+            border-radius: 10px;
+            width: 11rem;
+            height: 6.26rem;
+            box-shadow: 0px 18px 30px 0px rgba(139, 139, 139, 0.3);
+            border-radius: 30px;
+            position: relative;
+        }
+
+        .login-c .left {
+            border-radius: 30px;
+            width: 9.16rem;
+            background-image: url("/static/imgs/lefttab.png");
+            background-size: 100% 100%;
+            margin: 0px 0px 0px -2px;
+            padding: 0;
+            border: none;
+        }
+
+        .login-c .right {
+            border-radius: 0px 0px 0px 0px;
+            width: 5.5rem;
+            position: absolute;
+            right: 0;
+        }
+
+        .login-c .left .left-swc {
+            align-items: center;
+        }
+
+        .login-c .left .left-tpimg {
+            height: 3.02rem;
+            margin: 0.3rem 0rem 0.21rem 0rem;
+        }
+
+        .login-c .left .title {
+            font-size: 0.3rem;
+            color: #ffffff;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .login-c .left .txt-content {
+            font-size: 0.2rem;
+            color: #ffffff;
+            letter-spacing: 1px;
+            margin: 0.3rem 0.63rem 0.3rem 0.42rem;
+            height: 0.9rem;
+        }
+
+        .login-c .left .btn {
+            font-size: 0.22rem;
+            color: #34afe6;
+            letter-spacing: 3px;
+            background-color: 34 afe6;
+            border-radius: 30px;
+            text-align: center;
+            line-height: 0.48rem;
+            height: 0.48rem;
+            width: 2.1rem;
+            background-color: #ffffff;
+            margin: 0rem 0rem 0rem 0rem;
+            cursor: pointer;
+        }
+
+        .login-c .right .title {
+            text-align: center;
+            color: #333333;
+            font-size: 0.22rem;
+            letter-spacing: 3px;
+            margin: 1.12rem 0rem 0.9rem 0rem;
+            font-weight: bold;
+        }
+
+        .login-c .right .item-c {
+            justify-content: center;
+            margin: 0rem 0rem 0.4rem 0rem;
+        }
+
+        .login-c .right .item {
+            align-items: center;
+            background-color: #f7f7f7;
+            border-radius: 1rem;
+            height: 0.6rem;
+            line-height: 0.6rem;
+            width: 4.5rem;
+        }
+
+        .login-c .right .item img {
+            width: 0.2rem;
+            height: 0.2rem;
+            margin: 0.2rem;
+        }
+
+        .login-c .right .item input {
+            border: none;
+            font-size: 0.16rem;
+            height: 0.17rem;
+            line-height: 0.17rem;
+            background-color: transparent;
+            color: #999999;
+        }
+
+        .login-c .btn-c {
+            font-size: 0.18rem;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            letter-spacing: 3px;
+        }
+
+        .login-btn {
+            height: 0.38rem;
+            width: 1.3rem;
+            color: #ffffff;
+            line-height: 0.38rem;
+            background-color: #34afe6;
+            border-radius: 30px;
+            margin: 0rem 0.2rem 0rem 0rem;
+            cursor: pointer;
+        }
+
+        .cancel-btn {
+            height: 0.38rem;
+            width: 1.3rem;
+            color: #34afe6;
+            border: 1px solid #34afe6;
+            line-height: 0.38rem;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .url-bar {
+            width: 100%;
+            background-color: #ffffff;
+            text-align: left;
+            padding: 0rem 0rem 0.39rem 0rem;
+        }
+
+        .url-bar .left {
+            margin: 0rem 2.42rem 0rem 4.26rem;
+        }
+
+        .url-bar .left .title {
+            color: #333333;
+            font-size: 0.18rem;
+            font-weight: bold;
+            margin: 0.38rem 0rem 0rem 0rem;
+        }
+
+        .url-bar .left .column {
+            margin: 0.2rem 0.39rem 0rem 0rem;
+        }
+
+        .url-bar .left .column a {
+            color: #666666;
+            font-size: 0.14rem;
+            margin: 0rem 0rem 0.1rem 0rem;
+        }
+
+        .url-bar .right {
+            margin: 0.38rem 0rem 0rem 0rem;
+        }
+
+        .url-bar .right span {
+            color: #333333;
+            font-size: 0.18rem;
+            margin: 0rem 0rem 0.12rem 0rem;
+            font-weight: bold;
+        }
+
+        .url-bar .right img {
+            width: 1rem;
+            height: 1rem;
+            margin: 0rem 0rem 0rem 0rem;
+        }
+
+        .bottom-bar {
+            background-color: #297ff8;
+            width: 100%;
+            height: 1rem;
+            overflow-x: hidden;
+            color: #ffffff;
+            font-size: 0.14rem;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bottom-bar .row1 {
+            align-items: baseline;
+        }
+
+        .bottom-bar .tel {
+            font-size: 0.2rem;
+        }
+
+        .swiper-container {
+            width: 5rem;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+<div class="main">
+    <div class="flex-row head-bar">
+
+        <span></span>
+    </div>
+
+    <div class="flex-row main-content">
+        <div class="flex-row login-c">
+            <div class="left">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="flex-column swiper-slide left-swc">
+                            <img src="/static/imgs/demo3.png" class="left-tpimg"/>
+                            <div class="title"> 注册页</div>
+
+
+
+
+                        </div>
+
+                        <div class="flex-column swiper-slide left-swc">
+                            <img src="/static/imgs/demo2.png" class="left-tpimg"/>
+
+                            <div class="title"> 好的身体要有好的饮食习惯</div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right">
+
+                <div class="flex-row item-c">
+                    <div class="flex-row item">
+                        <img src="/static/imgs/usericon.png" alt="rrr"/>
+                        <input type="text" id="name" name="name"  placeholder="请输入用户名"/>
+                    </div>
+                </div>
+
+                <div class="flex-row item-c">
+                    <div class="flex-row item">
+                        <img src="/static/imgs/pwdicon.png"/>
+                        <input type="password" id="password" name="password" placeholder="请输入密码"/>
+                    </div>
+                </div>
+                <div class="flex-row item-c">
+                    <div class="flex-row item">
+                        <img src="/static/imgs/pwdicon.png"/>
+                        <select id="sex" name="sex" style="width: 50%;height: 20px">
+                            <option value="">请选择性别</option>
+                            <option value="0">男</option>
+                            <option value="1">女</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="flex-row item-c">
+                    <div class="flex-row item">
+
+                        <img src="/static/imgs/pwdicon.png"/>
+
+                        <select id="movement" name="movement" style="width: 50%;height: 20px">
+                            <option value="">请选择运动频率</option>
+                            <option value="高">高</option>
+                            <option value="中">中</option>
+                            <option value="低">低</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex-row item-c">
+                    <div class="flex-row item">
+                        <img src="/static/imgs/pwdicon.png"/>
+                        <select name="age" id="age" style="width: 50%;height: 20px">
+                            <option value="">请选择年龄范围</option>
+                            <option value="1-40">1-40</option>
+                            <option value="40-60">41-60</option>
+                            <option value="40-60">60+</option>
+
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="flex-row btn-c">
+                    <div class="login-btn"><a class="login-btn" href="login.html">登录</a></div>
+                    <div class="login-btn" onclick="ajaxPost()">确定</div>
+
+                </div>
+                <div class="flex-row btn-c">
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+<script src="/static/js/swiper/swiper-bundle.min.js"></script>
+
+<script type="text/javascript" src="/static/js/layer/2.4/layer.js"></script>
+<script type="text/javascript">
+    window.onload = () => {
+        fnResize();
+
+        var swiper = new Swiper(".swiper-container", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 3000, //切换间隔
+                disableOnInteraction: false,
+            },
+        });
+    };
+    const fnResize = () => {
+        let designSize = 1920; // 设计图尺寸
+        let html = document.documentElement;
+        let wW = html.clientWidth; // 窗口宽度
+        let rem = (wW * 100) / designSize;
+        document.documentElement.style.fontSize = rem + "px";
+        window.onresize = fnResize;
+    };
+</script>
+<script>
+    function ajaxPost() {
+        let name = $("#name").val();
+        document.getElementById('name').value;
+        if (!name) {
+            layer.msg("请输入账号", {time: 1000, icon: 2});
+            return true;
+        }
+        let password = document.getElementById('password').value;
+        if (!password) {
+            layer.msg("请输入密码", {time: 1000, icon: 2});
+            return true;
+        }
+        let age = document.getElementById('age').value;
+        if (!age) {
+            layer.msg("请选择年龄阶段", {time: 1000, icon: 2});
+            return true;
+        } let movement = document.getElementById('movement').value;
+        if (!movement) {
+            layer.msg("请选择运动频率", {time: 1000, icon: 2});
+            return true;
+        }
+        let sex = document.getElementById('sex').value;
+        if (!sex) {
+            layer.msg("请选择性别", {time: 1000, icon: 2});
+            return true;
+        }
+
+        $.ajax({
+            type: "post",
+            url: "loginregister",  //数据传输的控制器方法
+            data: {
+                name: name,
+                password: password,
+                age: age,
+                sex: sex,
+                movement: movement,
+            },
+            dataType: 'json',
+            success: function (data, msg) {
+                if (data.code == 200) {
+                    layer.msg(data.msg, {time: 1000, icon: 1}, () => {
+                        window.location.href = "/login"
+                    });
+                } else {
+                    layer.msg(data.msg, {time: 2000, icon: 2})
+                }
+            }
+        })
+    }
+</script>
+
+
+</html>
