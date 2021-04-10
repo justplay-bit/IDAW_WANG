@@ -8,7 +8,7 @@
     <meta http-equiv="Cache-Control" content="no-siteapp" />
 
 
-    <link rel="stylesheet" type="text/css" href="/static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/staticc/h-ui/css/H-ui.min.css" />
     <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/H-ui.admin.css" />
 
     <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/style.css" />
@@ -17,14 +17,14 @@
 <body>
 
 <div>
-    <p style="text-align: center;color: #0000FF;size: A3"> 个人主页</p>
+    <p style="text-align: center;color: #0000FF;size: A3"> Homepage </p>
 </div>
 <div class="page-container">
     <div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l">
-        <a class="btn btn-primary radius" data-title="添加进食记录" href="addfoot.html"><i class="Hui-iconfont">&#xe600;</i> 添加进食记录</a>
-        <a class="btn btn-primary radius" data-title="添加进食记录" href="addshiw.html"><i class="Hui-iconfont">&#xe600;</i> 添加食物</a>
-        <a class="btn btn-primary radius" data-title="添加进食记录" href="record.html"><i class="Hui-iconfont">&#xe600;</i> 查看历史记录</a>
-        <a class="btn btn-primary radius" data-title="添加进食记录" href="charts.html"><i class="Hui-iconfont">&#xe600;</i> 查看营养曲线</a>
+        <a class="btn btn-primary radius" data-title="Add eating record " href="addfoot.html"><i class="Hui-iconfont">&#xe600;</i> Add eating record </a>
+        <a class="btn btn-primary radius" data-title="Add eating record " href="addshiw.html"><i class="Hui-iconfont">&#xe600;</i> Add food </a>
+        <a class="btn btn-primary radius" data-title="Add eating record " href="record.html"><i class="Hui-iconfont">&#xe600;</i> View history </a>
+        <a class="btn btn-primary radius" data-title="Add eating record " href="charts.html"><i class="Hui-iconfont">&#xe600;</i> View nutrition curve </a>
     </span></div>
 
 
@@ -32,11 +32,11 @@
         <table class="table table-border table-bordered table-bg table-hover table-sort table-responsive">
             <thead>
             <tr class="text-c">
-                <th width="80">用户名</th>
-                <th width="200">性别</th>
-                <th width="120">年龄段</th>
-                <th width="120">运动水平</th>
-                <th width="120">日常能量需求量</th>
+                <th width="80">username </th>
+                <th width="200">gender </th>
+                <th width="120">generation </th>
+                <th width="120">Exercise level </th>
+                <th width="120">Daily energy requirement</th>
 
             </tr>
             </thead>
@@ -46,9 +46,9 @@
 
                 <td>{$data['name']}</td>
                 {if $data['sex']==0}
-                <td>男</td>
+                <td>man</td>
                 {else}
-                <td>女</td>
+                <td>woman</td>
                 {/if}
                 <td>{$data['age']}</td>
                 <td>{$data['movement']}</td>

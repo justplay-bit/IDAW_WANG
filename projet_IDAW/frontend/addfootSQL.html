@@ -21,41 +21,41 @@
 <article class="page-container">
     <form class="form form-horizontal" method="post"  id="form-article-add" enctype="multipart/form-data">
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>食物名称：</label>
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>Food name ：</label>
             <div class="formControls col-xs-8 col-sm-9">
 
                     <input type="text" class="input-text"  style="width: 50%"  value="" id="name" name="name">
             </div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">食物组成</label>
+            <label class="form-label col-xs-4 col-sm-2">Food composition </label>
             <div class="formControls col-xs-8 col-sm-9">
                 <textarea type="text"  style="height: 100px;width: 50%"  value="" id="zuc" name="zuc">
                 </textarea>
             </div>
         </div>
         <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">热量</label>
+            <label class="form-label col-xs-4 col-sm-2">Calories </label>
             <div class="formControls col-xs-8 col-sm-9">
                 <input type="number" class="input-text" value=""  placeholder="1-100" id="rel" name="rel">
             </div>
         </div>   <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">蛋白质含量</label>
+            <label class="form-label col-xs-4 col-sm-2">Protein content </label>
             <div class="formControls col-xs-8 col-sm-9">
                 <input type="number" class="input-text" value=""  placeholder="1-100" id="protein" name="protein">
             </div>
         </div>   <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">脂含量</label>
+            <label class="form-label col-xs-4 col-sm-2">Fat content </label>
             <div class="formControls col-xs-8 col-sm-9">
                 <input type="number" class="input-text" value=""  placeholder="1-100" id="lipid" name="lipid">
             </div>
         </div>   <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">糖含量</label>
+            <label class="form-label col-xs-4 col-sm-2">Sugar content </label>
             <div class="formControls col-xs-8 col-sm-9">
                 <input type="number" class="input-text" value=""  placeholder="1-100" id="sugar" name="sugar">
             </div>
         </div>   <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2">盐含量</label>
+            <label class="form-label col-xs-4 col-sm-2">Salt content </label>
             <div class="formControls col-xs-8 col-sm-9">
                 <input type="number" class="input-text" value=""   placeholder="1-100" id="salt" name="salt">
             </div>
@@ -63,9 +63,9 @@
         <div class="row cl">
             <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
                 <button  class="btn btn-primary radius"  onclick="save()" type="button"><i
-                        class="Hui-iconfont delbtn">&#xe632;</i> 保存
+                        class="Hui-iconfont delbtn">&#xe632;</i> save 
                 </button>
-                <a href="wecome.html" class="btn btn-default radius" type="button">&nbsp;&nbsp;返回&nbsp;&nbsp;</a>
+                <a href="wecome.html" class="btn btn-default radius" type="button">&nbsp;&nbsp;return &nbsp;&nbsp;</a>
             </div>
         </div>
     </form>
@@ -79,7 +79,7 @@
 <script>
     //文章添加
     function save(){
-        layer.confirm('确认添加?', {icon: 3, title: '提示'}, function (index) {
+        layer.confirm('Confirm add? ', {icon: 3, title: 'prompt '}, function (index) {
             $.ajax({
                 type: "POST",
                 dataType: "json",
@@ -91,7 +91,7 @@
                     })
                 },
                 error: function (dat, msg) {
-                    layer.msg('添加失败', {time: 1500, icon: 2})
+                    layer.msg('add failed ', {time: 1500, icon: 2})
                 }
             });
             return false;

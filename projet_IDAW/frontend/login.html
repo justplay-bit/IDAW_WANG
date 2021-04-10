@@ -312,25 +312,25 @@
             </div>
 
             <div class="right">
-                <div class="title">能量需求系统</div>
+                <div class="title">Energy demand system </div>
 
                 <div class="flex-row item-c">
                     <div class="flex-row item">
                         <img src="/static/imgs/usericon.png" alt="" />
-                        <input type="text"   id="name" name="name" placeholder="请输入用户名" />
+                        <input type="text"   id="name" name="name" placeholder="please enter user name " />
                     </div>
                 </div>
 
                 <div class="flex-row item-c">
                     <div class="flex-row item">
                         <img src="/static/imgs/pwdicon.png" />
-                        <input type="password" id="password" name="password" placeholder="请输入密码" />
+                        <input type="password" id="password" name="password" placeholder="Please enter the password " />
                     </div>
                 </div>
 
                 <div class="flex-row btn-c">
-                    <div class="login-btn" onclick="ajaxPost()" >登录</div>
-                    <div class="login-btn" ><a href="register.html">注册</a></div>
+                    <div class="login-btn" onclick="ajaxPost()" >log in </div>
+                    <div class="login-btn" ><a href="register.html">registered </a></div>
 
                 </div>
             </div>
@@ -370,12 +370,12 @@
         document.getElementById('name').value;
         if(!name)
         {
-            layer.msg("请输入账号",{time: 1000, icon: 2});return true;
+            layer.msg("please enter account ",{time: 1000, icon: 2});return true;
         }
         var password = document.getElementById('password').value;
         if(!password)
         {
-            layer.msg("请输入密码",{time: 1000, icon: 2});return true;
+            layer.msg("Please enter the password ",{time: 1000, icon: 2});return true;
         }
         $.ajax({
             type: "post",

@@ -7,7 +7,7 @@
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
     />
     <link href="/static/css/swiper/swiper-bundle.min.css" rel="stylesheet"/>
-    <title>日常能量</title>
+    <title>Daily energy </title>
 
     <script src="/static/js/jquery.min.js" type="text/javascript"></script>
 
@@ -300,7 +300,7 @@
                     <div class="swiper-wrapper">
                         <div class="flex-column swiper-slide left-swc">
                             <img src="/static/imgs/demo3.png" class="left-tpimg"/>
-                            <div class="title"> 注册页</div>
+                            <div class="title"> Registration page </div>
 
 
 
@@ -310,7 +310,7 @@
                         <div class="flex-column swiper-slide left-swc">
                             <img src="/static/imgs/demo2.png" class="left-tpimg"/>
 
-                            <div class="title"> 好的身体要有好的饮食习惯</div>
+                            <div class="title"> Good health requires good eating habits </div>
 
 
 
@@ -324,23 +324,23 @@
                 <div class="flex-row item-c">
                     <div class="flex-row item">
                         <img src="/static/imgs/usericon.png" alt="rrr"/>
-                        <input type="text" id="name" name="name"  placeholder="请输入用户名"/>
+                        <input type="text" id="name" name="name"  placeholder="please enter user name "/>
                     </div>
                 </div>
 
                 <div class="flex-row item-c">
                     <div class="flex-row item">
                         <img src="/static/imgs/pwdicon.png"/>
-                        <input type="password" id="password" name="password" placeholder="请输入密码"/>
+                        <input type="password" id="password" name="password" placeholder="Please enter the password "/>
                     </div>
                 </div>
                 <div class="flex-row item-c">
                     <div class="flex-row item">
                         <img src="/static/imgs/pwdicon.png"/>
                         <select id="sex" name="sex" style="width: 50%;height: 20px">
-                            <option value="">请选择性别</option>
-                            <option value="0">男</option>
-                            <option value="1">女</option>
+                            <option value="">Please select gender </option>
+                            <option value="0">man</option>
+                            <option value="1">woman</option>
                         </select>
 
                     </div>
@@ -351,10 +351,10 @@
                         <img src="/static/imgs/pwdicon.png"/>
 
                         <select id="movement" name="movement" style="width: 50%;height: 20px">
-                            <option value="">请选择运动频率</option>
-                            <option value="高">高</option>
-                            <option value="中">中</option>
-                            <option value="低">低</option>
+                            <option value="">Please select exercise frequency </option>
+                            <option value="高">high </option>
+                            <option value="中">medium </option>
+                            <option value="低">low </option>
                         </select>
                     </div>
                 </div>
@@ -362,7 +362,7 @@
                     <div class="flex-row item">
                         <img src="/static/imgs/pwdicon.png"/>
                         <select name="age" id="age" style="width: 50%;height: 20px">
-                            <option value="">请选择年龄范围</option>
+                            <option value="">Please select age range </option>
                             <option value="1-40">1-40</option>
                             <option value="40-60">41-60</option>
                             <option value="40-60">60+</option>
@@ -373,8 +373,8 @@
                 </div>
 
                 <div class="flex-row btn-c">
-                    <div class="login-btn"><a class="login-btn" href="login.html">登录</a></div>
-                    <div class="login-btn" onclick="ajaxPost()">确定</div>
+                    <div class="login-btn"><a class="login-btn" href="login.html">log in </a></div>
+                    <div class="login-btn" onclick="ajaxPost()">determine </div>
 
                 </div>
                 <div class="flex-row btn-c">
@@ -419,26 +419,26 @@
         let name = $("#name").val();
         document.getElementById('name').value;
         if (!name) {
-            layer.msg("请输入账号", {time: 1000, icon: 2});
+            layer.msg("please enter account ", {time: 1000, icon: 2});
             return true;
         }
         let password = document.getElementById('password').value;
         if (!password) {
-            layer.msg("请输入密码", {time: 1000, icon: 2});
+            layer.msg("Please enter the password ", {time: 1000, icon: 2});
             return true;
         }
         let age = document.getElementById('age').value;
         if (!age) {
-            layer.msg("请选择年龄阶段", {time: 1000, icon: 2});
+            layer.msg("Please select age ", {time: 1000, icon: 2});
             return true;
         } let movement = document.getElementById('movement').value;
         if (!movement) {
-            layer.msg("请选择运动频率", {time: 1000, icon: 2});
+            layer.msg("Please select exercise frequency ", {time: 1000, icon: 2});
             return true;
         }
         let sex = document.getElementById('sex').value;
         if (!sex) {
-            layer.msg("请选择性别", {time: 1000, icon: 2});
+            layer.msg("Please select gender ", {time: 1000, icon: 2});
             return true;
         }
 

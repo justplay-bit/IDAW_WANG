@@ -18,7 +18,7 @@
     <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css"/>
     <!--[if IE 6]>
     <![endif]-->
-    <title>折线图</title>
+    <title>line chart </title>
 </head>
 <body>
 <div class="page-container">
@@ -29,7 +29,7 @@
 
 
 </div>
-<div><a href="wecome.html" class="btn btn-default radius" type="button">&nbsp;&nbsp;返回&nbsp;&nbsp;</a></div>
+<div><a href="wecome.html" class="btn btn-default radius" type="button">&nbsp;&nbsp;return&nbsp;&nbsp;</a></div>
 <!--_footer 作为公共模版分离出去-->
 <script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
@@ -64,7 +64,7 @@
 
                     Highcharts.chart('container', {
                                 title: {
-                                    text: '营养曲线',
+                                    text: 'Nutrition curve ',
                                     x: -20 //center
                                 },
                                 subtitle: {
@@ -76,7 +76,7 @@
                                 },
                                 yAxis: {
                                     title: {
-                                        text: '数量'
+                                        text: 'Quantity '
                                     },
                                     plotLines: [{
                                         value: 0,
@@ -94,16 +94,16 @@
                                     borderWidth: 0
                                 },
                                 series: [{
-                                    name: '盐',
+                                    name: 'salt ',
                                     data: salt
                                 }, {
-                                    name: '蛋白质',
+                                    name: 'protein ',
                                     data: protein
                                 }, {
-                                    name: '糖',
+                                    name: 'sugar ',
                                     data: sugar
                                 }, {
-                                    name: '脂质',
+                                    name: 'Lipid ',
                                     data: lipid
                                 }]
                                
